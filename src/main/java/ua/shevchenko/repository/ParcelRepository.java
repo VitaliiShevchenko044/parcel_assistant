@@ -1,6 +1,5 @@
 package ua.shevchenko.repository;
 
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -40,6 +39,6 @@ public class ParcelRepository {
     }
 
     public ObservableList<Parcel> getAll() {
-        return FXCollections.unmodifiableObservableList(parcels);
+        return parcels;
     }
 }
