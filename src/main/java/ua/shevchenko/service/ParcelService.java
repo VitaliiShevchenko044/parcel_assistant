@@ -4,6 +4,7 @@ import javafx.collections.ObservableList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ua.shevchenko.dialog.TourNumberDialog;
+import ua.shevchenko.io.writer.TourPrinter;
 import ua.shevchenko.model.Parcel;
 import ua.shevchenko.repository.ParcelRepository;
 
@@ -70,7 +71,7 @@ public class ParcelService {
             inputRepository.remove(parcel);
             log.info("The parcel scanned - {}", parcel.getTrackingNumber());
             TourNumberDialog.getInstance().showDialog(this, parcel.getTourNumber());
-            //TourPrinter.printTourNumber(parcel.getTourNumber());
+            TourPrinter.printTourNumber(parcel.getTourNumber());
         } else {
             Optional<Parcel> scannedParcelOpt = scannedRepository.findParcel(scannedCode);
             if (scannedParcelOpt.isPresent()) {
