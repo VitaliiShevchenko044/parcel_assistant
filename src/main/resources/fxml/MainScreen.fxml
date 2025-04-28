@@ -88,7 +88,7 @@
          <image>
             <Image url="@../images/background.png" />
          </image></ImageView>
-      <Label fx:id="description" layoutX="567.0" layoutY="26.0" prefHeight="28.0" prefWidth="425.0" textAlignment="CENTER">
+      <Label fx:id="description" layoutX="567.0" layoutY="26.0" prefHeight="28.0" prefWidth="425.0" textAlignment="CENTER" textFill="#ff1c1c">
          <font>
             <Font name="Times New Roman Bold" size="24.0" />
          </font>
