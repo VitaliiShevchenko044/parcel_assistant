@@ -10,12 +10,12 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyCode;
 import javafx.util.Duration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ua.shevchenko.dialog.TourNumberDialog;
 import ua.shevchenko.io.writer.TXTWriter;
-import ua.shevchenko.io.writer.TourPrinter;
 import ua.shevchenko.model.Parcel;
 import ua.shevchenko.service.ParcelFileLoaderService;
 import ua.shevchenko.service.ParcelService;
@@ -53,6 +53,7 @@ public class MainScreenController {
         parcelService.setRescanListener(this::showDialogOnRescan);
         addParcelToInputListManually();
         addParcelToScannedListManually();
+        setupDeleteOnBackspace();
     }
 
     private void addParcelToInputListManually() {
@@ -74,7 +75,7 @@ public class MainScreenController {
             if (inputParcelOpt.isPresent()) {
                 Parcel parcel = inputParcelOpt.get();
                 TourNumberDialog.getInstance().showDialog(parcelService, parcel.getTourNumber());
-                TourPrinter.printTourNumber(parcel.getTourNumber());
+                //TourPrinter.printTourNumber(parcel.getTourNumber());
                 parcel.setTourNumber(parcel.getTourNumber() + " (MANUAL)");
                 parcelService.addParcelToScanned(parcel);
                 parcelService.removeParcelFromInput(parcel);
@@ -82,6 +83,17 @@ public class MainScreenController {
                 log.warn("Parcel not found {}", inputLine);
             }
             manualScanField.clear();
+        });
+    }
+
+    private void setupDeleteOnBackspace() {
+        inputParcelsTable.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.BACK_SPACE || event.getCode() == KeyCode.DELETE) {
+                Parcel selected = inputParcelsTable.getSelectionModel().getSelectedItem();
+                if (selected != null) {
+                    parcelService.getInputList().remove(selected);
+                }
+            }
         });
     }
 
