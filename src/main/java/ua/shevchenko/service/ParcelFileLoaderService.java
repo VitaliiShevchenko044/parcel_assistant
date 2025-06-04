@@ -25,6 +25,7 @@ public class ParcelFileLoaderService {
                 ExcelReader excelReader = new ExcelReader();
                 inputList = excelReader.read(file.getPath());
             }
+
             if (inputList != null) {
                 parcelService.addParcelsToInput(FXCollections.observableList(inputList));
             }
