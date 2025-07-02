@@ -7,9 +7,9 @@ import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 
-public class LofFileOpener {
+public class LogFileOpener {
 
-    private static final Logger log = LoggerFactory.getLogger(LofFileOpener.class);
+    private static final Logger log = LoggerFactory.getLogger(LogFileOpener.class);
 
     private static final File LOG_FILE = new File("logs/app.log");
 

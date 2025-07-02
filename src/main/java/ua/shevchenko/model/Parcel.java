@@ -13,11 +13,21 @@ public class Parcel {
         this.tourNumber = tourNumber;
     }
 
-    public String getTrackingNumber() {return trackingNumber;}
-    public String getGibitNumber() {return gibitNumber;}
-    public String getTourNumber() {return tourNumber;}
+    public String getTrackingNumber() {
+        return trackingNumber;
+    }
 
-    public void setTourNumber(String tourNumber) {this.tourNumber = tourNumber;}
+    public String getGibitNumber() {
+        return gibitNumber;
+    }
+
+    public String getTourNumber() {
+        return tourNumber;
+    }
+
+    public void setTourNumber(String tourNumber) {
+        this.tourNumber = tourNumber;
+    }
 
     @Override
     public boolean equals(Object o) {

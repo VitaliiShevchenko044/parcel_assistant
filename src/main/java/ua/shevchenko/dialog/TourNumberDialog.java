@@ -24,9 +24,12 @@ public class TourNumberDialog {
     private final Image ICON = new Image(
             Objects.requireNonNull(TourNumberDialog.class.getResourceAsStream("/images/icons/app_icon.png")));
 
-    private TourNumberDialog() {}
+    private TourNumberDialog() {
+    }
 
-    public static TourNumberDialog getInstance() {return INSTANCE;}
+    public static TourNumberDialog getInstance() {
+        return INSTANCE;
+    }
 
     public void showDialog(ParcelService parcelService, String tourNumber) {
         if (stage != null && stage.isShowing()) {

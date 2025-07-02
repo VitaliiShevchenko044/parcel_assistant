@@ -16,7 +16,8 @@ public class ParcelService {
 
     private final ParcelRepository inputRepository;
     private final ParcelRepository scannedRepository;
-    private Consumer<String> rescanListener = trackingNumber -> {};
+    private Consumer<String> rescanListener = trackingNumber -> {
+    };
 
     public ParcelService(ParcelRepository inputRepository, ParcelRepository scannedRepository) {
         this.inputRepository = inputRepository;
@@ -43,7 +44,9 @@ public class ParcelService {
         scannedRepository.add(parcel);
     }
 
-    public void removeParcelFromInput(Parcel parcel) {inputRepository.remove(parcel);}
+    public void removeParcelFromInput(Parcel parcel) {
+        inputRepository.remove(parcel);
+    }
 
     public Optional<Parcel> findParcelInInputList(String trackingNumber) {
         return inputRepository.findParcel(trackingNumber);
@@ -54,7 +57,9 @@ public class ParcelService {
         scannedRepository.clear();
     }
 
-    public void setRescanListener(Consumer<String> rescanListener) {this.rescanListener = rescanListener;}
+    public void setRescanListener(Consumer<String> rescanListener) {
+        this.rescanListener = rescanListener;
+    }
 
     /**
      * Обробляє відканований трек-номер.
@@ -70,7 +75,6 @@ public class ParcelService {
             inputRepository.remove(parcel);
             log.info("The parcel scanned - {}", parcel.getTrackingNumber());
             TourNumberDialog.getInstance().showDialog(this, parcel.getTourNumber());
-            //TourPrinter.printTourNumber(parcel.getTourNumber());
         } else {
             Optional<Parcel> scannedParcelOpt = scannedRepository.findParcel(scannedCode);
             if (scannedParcelOpt.isPresent()) {

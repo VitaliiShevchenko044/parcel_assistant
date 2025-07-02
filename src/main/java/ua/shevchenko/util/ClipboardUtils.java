@@ -14,7 +14,7 @@ public class ClipboardUtils {
         attachCopyHandlers(scannedParcelsTable);
     }
 
-    public static void attachCopyHandlers (TableView<?> table) {
+    public static void attachCopyHandlers(TableView<?> table) {
         table.getSelectionModel().setCellSelectionEnabled(true);
         table.getSelectionModel().setSelectionMode(javafx.scene.control.SelectionMode.MULTIPLE);
 

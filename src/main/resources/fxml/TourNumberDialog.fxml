@@ -4,12 +4,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="160.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.shevchenko.controller.TourNumberDialogController">
-   <children>
-      <Label fx:id="tourNumberLabel" alignment="CENTER" layoutX="-7.0" layoutY="-7.0" prefHeight="175.0" prefWidth="266.0" text="343">
-         <font>
-            <Font name="Times New Roman Bold" size="120.0" />
-         </font>
-      </Label>
-   </children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="160.0"
+            prefWidth="250.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ua.shevchenko.controller.TourNumberDialogController">
+    <Label fx:id="tourNumberLabel" alignment="CENTER" layoutX="-7.0" layoutY="-7.0" prefHeight="175.0" prefWidth="266.0"
+           text="343">
+        <font>
+            <Font name="Times New Roman Bold" size="120.0"/>
+        </font>
+    </Label>
 </AnchorPane>

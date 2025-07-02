@@ -15,7 +15,7 @@ public class TXTWriter {
 
     private static final Logger log = LoggerFactory.getLogger(TXTWriter.class);
 
-    public static void saveParcelsToTXT (List<Parcel> scannedList) {
+    public static void saveParcelsToTXT(List<Parcel> scannedList) {
         FileChooser fileChooser = new FileChooser();
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("TXT Files", "*.txt"));
         fileChooser.setInitialFileName("scanned_parcels.txt");

@@ -20,7 +20,7 @@ import ua.shevchenko.model.Parcel;
 import ua.shevchenko.service.ParcelFileLoaderService;
 import ua.shevchenko.service.ParcelService;
 import ua.shevchenko.util.ClipboardUtils;
-import ua.shevchenko.util.LofFileOpener;
+import ua.shevchenko.util.LogFileOpener;
 
 import java.util.Optional;
 
@@ -29,21 +29,34 @@ public class MainScreenController {
     private static final Logger log = LoggerFactory.getLogger(MainScreenController.class);
     private ParcelService parcelService;
 
-    @FXML private TableView<Parcel> inputParcelsTable;
-    @FXML private TableColumn<Parcel,Integer> inputIndexCol;
-    @FXML private TableColumn<Parcel, String> inputTrackingCol;
-    @FXML private TableColumn<Parcel, String> inputGibitCol;
-    @FXML private TableColumn<Parcel, String> inputToutCol;
+    @FXML
+    private TableView<Parcel> inputParcelsTable;
+    @FXML
+    private TableColumn<Parcel, Integer> inputIndexCol;
+    @FXML
+    private TableColumn<Parcel, String> inputTrackingCol;
+    @FXML
+    private TableColumn<Parcel, String> inputGibitCol;
+    @FXML
+    private TableColumn<Parcel, String> inputToutCol;
 
-    @FXML private TableView<Parcel> scannedParcelsTable;
-    @FXML private TableColumn<Parcel,Integer> scannedIndexCol;
-    @FXML private TableColumn<Parcel, String> scannedTrackingCol;
-    @FXML private TableColumn<Parcel, String> scannedGibitCol;
-    @FXML private TableColumn<Parcel, String> scannedToutCol;
+    @FXML
+    private TableView<Parcel> scannedParcelsTable;
+    @FXML
+    private TableColumn<Parcel, Integer> scannedIndexCol;
+    @FXML
+    private TableColumn<Parcel, String> scannedTrackingCol;
+    @FXML
+    private TableColumn<Parcel, String> scannedGibitCol;
+    @FXML
+    private TableColumn<Parcel, String> scannedToutCol;
 
-    @FXML private TextField manualInputField;
-    @FXML private TextField manualScanField;
-    @FXML private Label description;
+    @FXML
+    private TextField manualInputField;
+    @FXML
+    private TextField manualScanField;
+    @FXML
+    private Label description;
 
     public void initWithService(ParcelService parcelService) {
         this.parcelService = parcelService;
@@ -75,7 +88,6 @@ public class MainScreenController {
             if (inputParcelOpt.isPresent()) {
                 Parcel parcel = inputParcelOpt.get();
                 TourNumberDialog.getInstance().showDialog(parcelService, parcel.getTourNumber());
-                //TourPrinter.printTourNumber(parcel.getTourNumber());
                 parcel.setTourNumber(parcel.getTourNumber() + " (MANUAL)");
                 parcelService.addParcelToScanned(parcel);
                 parcelService.removeParcelFromInput(parcel);
@@ -106,7 +118,7 @@ public class MainScreenController {
 
     private void setupTable(ObservableList<Parcel> source,
                             TableView<Parcel> table,
-                            TableColumn<Parcel,Integer> indexColumn,
+                            TableColumn<Parcel, Integer> indexColumn,
                             TableColumn<Parcel, String> trackingNumberColumn,
                             TableColumn<Parcel, String> gibitNumberColumn,
                             TableColumn<Parcel, String> tourNumberColumn) {
@@ -118,19 +130,23 @@ public class MainScreenController {
         table.setItems(source);
     }
 
-    @FXML private void onUploadFileBtnClicked() {
+    @FXML
+    private void onUploadFileBtnClicked() {
         ParcelFileLoaderService.uploadFile(parcelService);
     }
 
-    @FXML private void onSaveBtnClicked() {
+    @FXML
+    private void onSaveBtnClicked() {
         TXTWriter.saveParcelsToTXT(parcelService.getScannedList());
     }
 
-    @FXML private void onClearListsBtnClicked() {
+    @FXML
+    private void onClearListsBtnClicked() {
         parcelService.clearAllRepositories();
     }
 
-    @FXML private void onLogBtnClicked() {
-        LofFileOpener.openLogFile();
+    @FXML
+    private void onLogBtnClicked() {
+        LogFileOpener.openLogFile();
     }
 }
