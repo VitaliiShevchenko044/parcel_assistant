@@ -1,9 +1,9 @@
-package ua.shevchenko.repository;
+package com.dev.repository;
 
 import javafx.collections.ObservableList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ua.shevchenko.model.Parcel;
+import com.dev.model.Parcel;
 
 import java.util.Optional;
 

@@ -1,4 +1,4 @@
-package ua.shevchenko.model;
+package com.dev.model;
 
 import java.util.Objects;
 

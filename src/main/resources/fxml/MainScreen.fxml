@@ -15,8 +15,8 @@
 <?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="688.0"
-            prefWidth="992.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="ua.shevchenko.controller.MainScreenController">
+            prefWidth="992.0" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.dev.controller.MainScreenController">
     <children>
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e9ffca" height="31.0" layoutX="506.0" layoutY="146.0"
                    stroke="#bcbcbc" strokeType="INSIDE" width="472.0"/>

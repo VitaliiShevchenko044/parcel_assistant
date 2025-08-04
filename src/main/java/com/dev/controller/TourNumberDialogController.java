@@ -1,4 +1,4 @@
-package ua.shevchenko.controller;
+package com.dev.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

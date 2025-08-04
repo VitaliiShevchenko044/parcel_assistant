@@ -1,4 +1,4 @@
-package ua.shevchenko.io.reader;
+package com.dev.io.reader;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -7,7 +7,7 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ua.shevchenko.model.Parcel;
+import com.dev.model.Parcel;
 
 import java.io.IOException;
 import java.io.InputStream;

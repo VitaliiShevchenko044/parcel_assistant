@@ -1,4 +1,4 @@
-package ua.shevchenko;
+package com.dev;
 
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -8,11 +8,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import ua.shevchenko.controller.MainScreenController;
-import ua.shevchenko.model.Parcel;
-import ua.shevchenko.repository.ParcelRepository;
-import ua.shevchenko.service.ParcelService;
-import ua.shevchenko.util.BarcodeScannerManager;
+import com.dev.controller.MainScreenController;
+import com.dev.model.Parcel;
+import com.dev.repository.ParcelRepository;
+import com.dev.service.ParcelService;
+import com.dev.util.BarcodeScannerManager;
 
 import java.util.Objects;
 

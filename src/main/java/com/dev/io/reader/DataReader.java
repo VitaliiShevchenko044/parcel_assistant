@@ -1,6 +1,6 @@
-package ua.shevchenko.io.reader;
+package com.dev.io.reader;
 
-import ua.shevchenko.model.Parcel;
+import com.dev.model.Parcel;
 
 import java.util.List;
 

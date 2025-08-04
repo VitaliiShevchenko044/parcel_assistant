@@ -8,7 +8,7 @@ module ParcelAssistant {
     requires org.apache.poi.ooxml;
     requires java.desktop;
 
-    opens ua.shevchenko.controller to javafx.fxml;
-    exports ua.shevchenko;
-    exports ua.shevchenko.model;
+    opens com.dev.controller to javafx.fxml;
+    exports com.dev;
+    exports com.dev.model;
 }

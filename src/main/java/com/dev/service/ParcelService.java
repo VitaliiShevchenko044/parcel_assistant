@@ -1,11 +1,11 @@
-package ua.shevchenko.service;
+package com.dev.service;
 
 import javafx.collections.ObservableList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ua.shevchenko.dialog.TourNumberDialog;
-import ua.shevchenko.model.Parcel;
-import ua.shevchenko.repository.ParcelRepository;
+import com.dev.dialog.TourNumberDialog;
+import com.dev.model.Parcel;
+import com.dev.repository.ParcelRepository;
 
 import java.util.Optional;
 import java.util.function.Consumer;

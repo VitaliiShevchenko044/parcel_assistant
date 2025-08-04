@@ -1,4 +1,4 @@
-package ua.shevchenko.util;
+package com.dev.util;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

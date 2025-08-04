@@ -1,10 +1,10 @@
-package ua.shevchenko.service;
+package com.dev.service;
 
 import javafx.collections.FXCollections;
 import javafx.stage.FileChooser;
-import ua.shevchenko.io.reader.ExcelReader;
-import ua.shevchenko.io.reader.TXTReader;
-import ua.shevchenko.model.Parcel;
+import com.dev.io.reader.ExcelReader;
+import com.dev.io.reader.TXTReader;
+import com.dev.model.Parcel;
 
 import java.io.File;
 import java.util.List;

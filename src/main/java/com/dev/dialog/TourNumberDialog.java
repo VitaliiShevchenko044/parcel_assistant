@@ -1,4 +1,4 @@
-package ua.shevchenko.dialog;
+package com.dev.dialog;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -7,9 +7,9 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ua.shevchenko.controller.TourNumberDialogController;
-import ua.shevchenko.service.ParcelService;
-import ua.shevchenko.util.BarcodeScannerManager;
+import com.dev.controller.TourNumberDialogController;
+import com.dev.service.ParcelService;
+import com.dev.util.BarcodeScannerManager;
 
 import java.io.IOException;
 import java.util.Objects;

@@ -1,4 +1,4 @@
-package ua.shevchenko.controller;
+package com.dev.controller;
 
 import javafx.animation.PauseTransition;
 import javafx.application.Platform;
@@ -14,13 +14,13 @@ import javafx.scene.input.KeyCode;
 import javafx.util.Duration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ua.shevchenko.dialog.TourNumberDialog;
-import ua.shevchenko.io.writer.TXTWriter;
-import ua.shevchenko.model.Parcel;
-import ua.shevchenko.service.ParcelFileLoaderService;
-import ua.shevchenko.service.ParcelService;
-import ua.shevchenko.util.ClipboardUtils;
-import ua.shevchenko.util.LogFileOpener;
+import com.dev.dialog.TourNumberDialog;
+import com.dev.io.writer.TXTWriter;
+import com.dev.model.Parcel;
+import com.dev.service.ParcelFileLoaderService;
+import com.dev.service.ParcelService;
+import com.dev.util.ClipboardUtils;
+import com.dev.util.LogFileOpener;
 
 import java.util.Optional;
 

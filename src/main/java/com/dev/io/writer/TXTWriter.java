@@ -1,9 +1,9 @@
-package ua.shevchenko.io.writer;
+package com.dev.io.writer;
 
 import javafx.stage.FileChooser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ua.shevchenko.model.Parcel;
+import com.dev.model.Parcel;
 
 import java.io.BufferedWriter;
 import java.io.File;

@@ -1,4 +1,4 @@
-package ua.shevchenko.util;
+package com.dev.util;
 
 import javafx.event.EventHandler;
 import javafx.scene.Scene;

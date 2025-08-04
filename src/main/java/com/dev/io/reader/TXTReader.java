@@ -1,8 +1,8 @@
-package ua.shevchenko.io.reader;
+package com.dev.io.reader;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ua.shevchenko.model.Parcel;
+import com.dev.model.Parcel;
 
 import java.io.IOException;
 import java.nio.file.Files;
